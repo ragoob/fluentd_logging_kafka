@@ -29,6 +29,10 @@ services:
     build: .
     networks: 
       - kafka-net
+    depends_on: 
+      - kafka
+    links: 
+      - kafka
     volumes:
       - ./fluentd/conf:/fluentd/etc
     ports:
