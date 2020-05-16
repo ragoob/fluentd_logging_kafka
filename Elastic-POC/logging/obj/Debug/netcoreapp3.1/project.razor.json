@@ -1,5 +1,5 @@
 {
-  "FilePath": "/home/mohammed/work/Logging/Elastic-POC/logging/logging.csproj",
+  "FilePath": "/home/mohammed/work/Logging/fluentd_logging_kafka/Elastic-POC/logging/logging.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
