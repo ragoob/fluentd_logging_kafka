@@ -1,0 +1,7 @@
+config.reload.automatic: true
+http.host: 0.0.0.0
+log.level: debug
+path.config: /usr/share/logstash/pipeline
+path.logs: /var/log/logstash
+xpack.monitoring.elasticsearch.url: http://elastic:9200
+xpack.monitoring.enabled: true

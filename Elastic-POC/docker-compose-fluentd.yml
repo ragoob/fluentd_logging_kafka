@@ -1,0 +1,36 @@
+version: '3'
+
+networks:
+  kafka-net:
+    driver: bridge
+
+services: 
+  zookeeper-server:
+    image: bitnami/zookeeper:latest
+    networks:
+      - kafka-net
+    ports:
+      - 2181:2181
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+  kafka:
+    image: bitnami/kafka:latest
+    networks:
+      - kafka-net    
+    ports:
+      - 9092:9092
+    environment:
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - zookeeper-server
+  fluentd:
+    build: .
+    networks: 
+      - kafka-net
+    volumes:
+      - ./fluentd/conf:/fluentd/etc
+    ports:
+      - 24224:24224
+      - 24224:24224/udp
