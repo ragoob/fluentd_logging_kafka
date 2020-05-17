@@ -5,5 +5,6 @@
  #### Run 
   sudo docker-compose --f docker-compose-fluentd.yml up --build
  #### Notes :
-  Elastic search need at least 2 GB of memory 
+  - Elastic search need at least 2 GB of memory 
+  - do not use kafka inside docker in production
   
