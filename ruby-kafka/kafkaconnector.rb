@@ -1,11 +1,23 @@
+
 require "kafka"
 kafka = Kafka.new(
-    ["localhost:9092"]
+ [ARGV[0]]
     )
-producer = kafka.producer
-producer.produce("test message1",topic: "message_logs")
-producer.produce("test message2",topic: "message_logs")
-producer.produce("test message3",topic: "message_logs")
-producer.produce("test message4",topic: "message_logs")
-producer.deliver_messages
-print "messages published to borker"
+
+    # Consumers with the same group id will form a Consumer Group together.
+consumer = kafka.consumer(group_id: ARGV[1]
+)
+
+# It's possible to subscribe to multiple topics by calling `subscribe`
+# repeatedly.
+consumer.subscribe("message_logs")
+
+# Stop the consumer when the SIGTERM signal is sent to the process.
+# It's better to shut down gracefully than to kill the process.
+trap("TERM") { consumer.stop }
+
+# This will loop indefinitely, yielding each message in turn.
+consumer.each_message do |message|
+  puts message.topic, message.partition
+  puts message.offset, message.key, message.value
+end
