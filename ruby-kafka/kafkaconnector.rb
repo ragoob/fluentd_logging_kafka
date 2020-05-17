@@ -6,7 +6,7 @@ kafka = Kafka.new(
 
 consumer = kafka.consumer(group_id: ARGV[1]
 )
-consumer.subscribe("message_logs")
+consumer.subscribe("myLogger")
 trap("TERM") { consumer.stop }
 consumer.each_message do |message|
   puts message.topic, message.partition

@@ -24,7 +24,8 @@ services:
       - 9092:9092
     environment:
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://192.168.1.6:9092
+      - KAFKA_CFG_LISTENERS:PLAINTEXT://0.0.0.0:9092
       - ALLOW_PLAINTEXT_LISTENER=yes
     depends_on:
       - zookeeper-server

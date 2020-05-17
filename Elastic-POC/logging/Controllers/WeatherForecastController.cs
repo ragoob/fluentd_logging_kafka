@@ -26,7 +26,7 @@ namespace logging.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
 
-            Log.Information($"feach data from WeatherForecast api " + DateTime.Now.ToString());
+            Log.Information($"Hello Regoo Hello " + DateTime.Now.ToString());
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

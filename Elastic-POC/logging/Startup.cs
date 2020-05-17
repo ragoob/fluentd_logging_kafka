@@ -28,8 +28,8 @@ namespace logging
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string brokers = "localhost:9092";
-            string topic = "message_logs";
+            string brokers = "192.168.1.6:9092";
+            string topic = "myLogger22";
            var Logger  = new LoggerConfiguration()
              .WriteTo.Kafka(brokers,50,5,topic:topic)
              .CreateLogger();
