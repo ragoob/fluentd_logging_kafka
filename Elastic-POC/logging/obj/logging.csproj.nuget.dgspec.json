@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/mohammed/work/Elastic-POC/logging/logging.csproj": {}
+    "/home/mohammed/work/Logging/fluentd_logging_kafka/Elastic-POC/logging/logging.csproj": {}
   },
   "projects": {
-    "/home/mohammed/work/Elastic-POC/logging/logging.csproj": {
+    "/home/mohammed/work/Logging/fluentd_logging_kafka/Elastic-POC/logging/logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mohammed/work/Elastic-POC/logging/logging.csproj",
+        "projectUniqueName": "/home/mohammed/work/Logging/fluentd_logging_kafka/Elastic-POC/logging/logging.csproj",
         "projectName": "logging",
-        "projectPath": "/home/mohammed/work/Elastic-POC/logging/logging.csproj",
+        "projectPath": "/home/mohammed/work/Logging/fluentd_logging_kafka/Elastic-POC/logging/logging.csproj",
         "packagesPath": "/home/mohammed/.nuget/packages/",
-        "outputPath": "/home/mohammed/work/Elastic-POC/logging/obj/",
+        "outputPath": "/home/mohammed/work/Logging/fluentd_logging_kafka/Elastic-POC/logging/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mohammed/.nuget/NuGet/NuGet.Config"

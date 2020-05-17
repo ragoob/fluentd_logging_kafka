@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MBzBX7EMEMaCkRMDrhfrIJwSUUrkU0J6BVH8wXpCr4y5zF8MsDdRimA3+wMTtAIazGVm/yZkQ29C5nvrb3Fb2Q==",
+  "dgSpecHash": "FCtFmAUZq9QdNXQ4lt/n4HEvGWchlDesxgmAlnNxMt1crF+EMAibYfYcHeNo2R4/XmFuFyeqj3VUvA58GkuiKg==",
   "success": true,
-  "projectFilePath": "/home/mohammed/work/Elastic-POC/logging/logging.csproj",
+  "projectFilePath": "/home/mohammed/work/Logging/fluentd_logging_kafka/Elastic-POC/logging/logging.csproj",
   "expectedPackageFiles": [
     "/home/mohammed/.nuget/packages/confluent.kafka/1.4.2/confluent.kafka.1.4.2.nupkg.sha512",
     "/home/mohammed/.nuget/packages/librdkafka.redist/1.4.2/librdkafka.redist.1.4.2.nupkg.sha512",
