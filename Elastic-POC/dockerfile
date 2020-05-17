@@ -4,4 +4,6 @@ USER root
 RUN ["gem", "install", "fluent-plugin-elasticsearch", "--no-document", "--version", "3.5.2"]
 RUN ["gem", "install", "fluent-plugin-kafka", "--no-document"]
 RUN ["gem","install","ruby-kafka", "--no-document"]
+RUN mkdir ./logs/
+RUN chown fluent:fluent /logs/
 USER fluent

@@ -35,6 +35,7 @@ services:
       - kafka-net    
     volumes:
       - ./fluentd/conf:/fluentd/etc
+      - ./logs:/home/logs
     ports:
       - 24224:24224
       - 24224:24224/udp
